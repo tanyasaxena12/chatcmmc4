@@ -2,7 +2,6 @@ from sqlalchemy.engine.url import make_url
 from flask import request
 import os
 
-
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
@@ -90,6 +89,7 @@ class Config:
     def init_app(app):
         pass
 
+
 class ProductionConfig(Config, ):
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI') or \
@@ -99,6 +99,7 @@ class ProductionConfig(Config, ):
     POSTGRES_USER = url.username
     POSTGRES_PASSWORD = url.password
     POSTGRES_DB = url.database
+
 
 class DevelopmentConfig(Config):
     DEBUG = True
@@ -127,3 +128,4 @@ config = {
     'testing': TestingConfig,
     'default': ProductionConfig
 }
+

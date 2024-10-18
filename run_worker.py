@@ -2,7 +2,6 @@ from app import create_app
 from app.utils.bg_worker import bg_app
 import os
 
-
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 
 with bg_app.open():

@@ -17,7 +17,6 @@ https://github.com/procrastinate-org/procrastinate/issues/438
 procrastinate --verbose --app=app.utils.bg_worker.bg_app worker
 
 '''
-
 class BgWorker:
     '''
     from app.utils.bg_worker import bg_app
@@ -59,8 +58,8 @@ class BgWorker:
     def delete_old_jobs(self, hours=8, include_error=False):
         return self.manager.delete_old_jobs(nb_hours=int(hours),include_error=include_error)
 
-
 with bg_app.open():
   worker = BgWorker()
   r = worker.list_jobs(status="succeeded")
   print(json.dumps(r,indent=4,default=str))
+

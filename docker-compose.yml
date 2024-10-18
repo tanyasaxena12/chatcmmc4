@@ -9,7 +9,7 @@ services:
       - db_nw
       - web_nw
     ports:
-      - "5000:5000"
+      - "5001:5000"
     restart: unless-stopped
     environment:
       - SQLALCHEMY_DATABASE_URI=postgresql://${POSTGRES_USER:-db1}:${POSTGRES_PASSWORD:-db1}@${POSTGRES_HOST:-postgres}/${POSTGRES_DB:-db1}
@@ -61,7 +61,7 @@ services:
     networks:
       - db_nw
     restart: unless-stopped
-
+    
 networks:
   db_nw:
     driver: bridge
@@ -69,3 +69,5 @@ networks:
     driver: bridge
 volumes:
   dbdata:
+
+  
