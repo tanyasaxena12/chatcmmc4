@@ -44,5 +44,3 @@ EXPOSE 8080
 
 CMD ["python3.8", "-m", "http.server", "8080"]
 
-
-

@@ -17,6 +17,7 @@ https://github.com/procrastinate-org/procrastinate/issues/438
 procrastinate --verbose --app=app.utils.bg_worker.bg_app worker
 
 '''
+
 class BgWorker:
     '''
     from app.utils.bg_worker import bg_app

@@ -90,7 +90,6 @@ with open(file) as f:
               }
               control_map[new_id] = record
 
-
 #print(json.dumps(control_map,indent=4))
 data = []
 for ref,control in control_map.items():
